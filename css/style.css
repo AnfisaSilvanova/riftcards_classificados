@@ -1,0 +1,290 @@
+/* Reset básico e configurações do box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estrutura da página com Flexbox */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000f21; /* Fundo escuro */
+  color: #e0e0e0;            /* Texto claro */
+  background-image: url("../assets/background_2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+/* Conteúdo principal cresce para empurrar o rodapé */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+  position: relative;
+}
+
+.main-titulos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+}
+
+/* Imagem de fundo fixa e escurecida */
+.bg-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Container genérico para centralizar conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho e navegação */
+header {
+  background-color: #16213e;
+  padding: 15px 0;
+  border-bottom: 2px solid #0f3460;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #e94560; /* Cor de destaque */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #e94560;
+}
+
+/* Rodapé fixado ao final mesmo com pouco conteúdo */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #16213e;
+  border-top: 2px solid #0f3460;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Página Anuncios*/
+
+.anuncios-container {
+    display: flex; /* Flexbox para o grid de cartas */
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre as cartas */
+    justify-content: center;
+}
+
+.card-anuncio {
+    background-color: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-anuncio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(233, 69, 96, 0.2);
+}
+
+.card-anuncio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-anuncio h3 {
+    margin: 15px 0 10px;
+    color: #e94560;
+}
+
+.card-anuncio p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-anuncio a {
+    text-decoration: none;
+    background-color: #0f3460;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Pagina Detalhe Anuncio*/
+
+.detalhe-container {
+    display: flex; /* Flexbox para layout de duas colunas */
+    gap: 40px;
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.detalhe-imagem {
+    flex-basis: 40%; /* Largura da coluna da imagem */
+}
+
+.detalhe-imagem img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.detalhe-info {
+    flex-basis: 60%; /* Largura da coluna de informações */
+}
+
+.detalhe-info h1 {
+    color: #e94560;
+    margin-bottom: 20px;
+}
+
+.detalhe-info .preco {
+    font-size: 2em;
+    font-weight: bold;
+    color: #50c878; /* Verde para o preço */
+    margin-bottom: 20px;
+}
+
+.detalhe-info p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Pagina Cadastrar*/
+
+/* css/style.css - Adicionar este trecho */
+
+.form-cadastro {
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #e94560;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c33c51;
+}
+
+/* Pagina Portfolio*/
+
+.portfolio-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.portfolio-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 4px solid #e94560;
+    margin-bottom: 20px;
+    object-fit: cover;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Anúncio - Riftbound Classificados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">RiftCards</div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="anuncios.html">Ver Cartas</a></li>
+                    <li><a href="cadastrar.html">Anunciar</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-titulos">
+
+        <h1 class="titulo">Cadastrar Novo Anúncio</h1></h1>
+
+        <form action="#" method="POST" class="form-cadastro">
+            <div class="form-grupo">
+                <label for="nome-carta">Nome da Carta:</label>
+                <input type="text" id="nome-carta" name="nome-carta" required>
+            </div>
+            <div class="form-grupo">
+                <label for="preco">Preço (R$):</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
+            </div>
+            <div class="form-grupo">
+                <label for="raridade">Raridade:</label>
+                <select id="raridade" name="raridade">
+                    <option value="comum">Comum</option>
+                    <option value="incomum">Incomum</option>
+                    <option value="rara">Rara</option>
+                    <option value="epica">Épica</option>
+                    <option value="lendaria">Lendária</option>
+                </select>
+            </div>
+             <div class="form-grupo">
+                <label for="imagem">Foto da Carta:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*">
+            </div>
+            <div class="form-grupo">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Publicar Anúncio</button>
+        </form>
+    </main>
+
+    <footer>
+                        <p>&copy; 2025 Riftbound Classificados. Desenvolvido por Anfisa Silvanova.</p>
+        </footer>
+</body>
+</html>
