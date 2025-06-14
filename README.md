@@ -25,14 +25,5 @@ Este site foi desenvolvido como trabalho avaliativo para a disciplina de Padrõe
 
 O objetivo era criar um site de classificados estático, aplicando os conhecimentos de HTML e CSS para desenvolver uma plataforma web funcional e visualmente agradável.
 
-🏃 Como Executar
-Por ser um projeto puramente front-end, não é necessária nenhuma instalação complexa.
-
-Clone este repositório:
-Bash
-
-git clone https://github.com/seu-usuario/riftcards.git
-Navegue até a pasta do projeto.
-Abra o arquivo index.html em qualquer navegador de sua preferência.
 ✒️ Autor
 Anfisa Silvanova
